@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="800.0" prefWidth="1000.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.example.arpaspeter_javafxrestclientdolgozat.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox prefHeight="55.0" prefWidth="960.0" spacing="20.0">
+         <children>
+            <Button fx:id="insertBtn" mnemonicParsing="false" onAction="#insertOnClick" prefHeight="55.0" prefWidth="105.0" text="Insert" textAlignment="CENTER" />
+            <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#updateOnclick" prefHeight="55.0" prefWidth="105.0" text="Update" />
+            <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteOnClick" prefHeight="55.0" prefWidth="105.0" text="Delete" />
+         </children>
+      </HBox>
+      <TableView fx:id="dogTable" prefHeight="700.0" prefWidth="960.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="240.0" text="Name" />
+          <TableColumn fx:id="breedCol" prefWidth="240.0" text="Breed" />
+            <TableColumn fx:id="ageCol" prefWidth="240.0" text="Age" />
+            <TableColumn fx:id="vaccinatedCol" prefWidth="240.0" text="Vaccinated?" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
